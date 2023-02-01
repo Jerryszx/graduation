@@ -1,0 +1,86 @@
+body{
+    padding:0;
+    margin: 0;
+    border: 0;
+    width: 1370px;
+    height: 665px;
+}
+.top{
+    height: 50px;
+    text-align: center;
+}
+.one{
+    margin-left: 60px;
+    position: relative;
+}
+.one::before{
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: -47px;
+    background-size: 44px;
+    border-radius: 22px;
+    background-image: url("https://tupian.qqw21.com/article/UploadPic/2019-12/201912281195811920.jpg");
+    background-repeat: no-repeat;
+}
+.three{
+    height: 50px;
+    width: 200px;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+.three::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    background-size: 30px 30px;
+    position: absolute;
+    left: -40px;
+    background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.0e2431850cdbef74b5887f4dbd94d70e?rik=WrYSe5DbmHAUlA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f40002%2f3807.jpg_wh1200.jpg&ehk=3zviJKbE4PXEuGKOGLGwTeHTvnwcSlpGY1waHKf97wg%3d&risl=&pid=ImgRaw&r=0");
+}
+.center{
+    height: 615px;
+    position: relative;
+    background:url("https://ts1.cn.mm.bing.net/th/id/R-C.85bcfe3d57bd5f37c44308d970d5f6bf?rik=oWvTmy8y2ZIwEw&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fphotoblog%2f1106%2f05%2fc4%2f7902634_7902634_1307282411452.jpg&ehk=5FxMrJ5SFfWyJq8vhvpKIVryKjevlLQ9Fi%2bfFno8upY%3d&risl=&pid=ImgRaw&r=0") no-repeat center / cover;
+}
+.userpage{
+    width: 320px;
+    height: 500px;
+    position: absolute;
+    left: 525px;
+    top:0;
+    background-color: white;
+    border-color: dimgray;
+    border-radius: 15px;
+    padding: 30px;
+}
+form{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#login{
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    background-color: darkorange;
+    border-radius: 7px;
+    border-color: burlywood;
+}
+.two{
+    text-decoration: none;
+    float: right;
+    color: black;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}

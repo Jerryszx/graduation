@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>模板</title>
+    <link rel="stylesheet" th:href="@{layout.css}">
+</head>
+<body>
+<div class="top">
+    <div class="left">轩轩旅行网</div>
+    <form >
+        <input placeholder="搜索任何旅游相关" type="text">
+        <img class="i1" src="https://ts1.cn.mm.bing.net/th/id/R-C.756285576f9fda6ed56dd804005ca45e?rik=a1N7kzQlgrL4pw&riu=http%3a%2f%2fres.dps.cn%2fres%2fdecoration%2ffree302021042520766%2fthn%2f5ba65c6949c19f2e158e3dae2b07c08b.png%3fx-oss-process%3dimage%2fresize%2cl_600%2fsharpen%2c100&ehk=9ObDdf5c%2bFlaH127ITQZJfeal5IPkeT5onaqlpdTOCM%3d&risl=&pid=ImgRaw&r=0">
+    </form>
+    <div class="right">
+        <a href="/register" class="one">请登录</a>
+        <img class="i2" src="https://ts1.cn.mm.bing.net/th/id/R-C.445bd8690f730bae2b1fbb9e68e465bb?rik=HVCejQIiYsYNEA&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f19%2f04%2f05%2f1756673536520ae2d4d8f0b690392b07.jpg&ehk=A0GD%2fM%2fPAs8L6JoWpOARWRrVWksilm6QhqbgqZMCJBs%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1">
+        <a href="/login" class="two">注册</a>
+        <a href="" class="three">购物车</a>
+        <a href="/personalcenter" >
+            <img src="https://img.ixintu.com/upload/jpg/20210526/67cbeaafe2ebd1f21eea276c5d1c8eba_48016_716_717.jpg!ys" class="four">
+        </a>
+    </div>
+    <form class="f1">
+        <select>
+            <option>我的订单</option>
+            <option>景点订单</option>
+            <option>酒店订单</option>
+            <option>车票订单</option>
+            <option>机票订单</option>
+            <option>全部订单</option>
+        </select>
+    </form>
+</div>
+<div th:include="::content"></div>
+</body>
+</html>
