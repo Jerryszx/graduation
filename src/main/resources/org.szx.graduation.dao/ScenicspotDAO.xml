@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.szx.graduation.dao.ScenicspotDAO">
+    <resultMap id="scenicspotResultMap" type="org.szx.graduation.dataobject.ScenicspotDO">
+        <id column="id" property="id"/>
+        <result column="sname" property="sname"/>
+        <result column="rates" property="rates"/>
+        <result column="city" property="city"/>
+        <result column="sort" property="sort"/>
+        <result column="introduce" property="introduce"/>
+        <result column="gmtCreated" property="gmtCreated"/>
+    </resultMap>
+
+    <select id="findByName" resultMap="scenicspotResultMap">
+        SELECT * FROM scenicspot WHERE sname LIKE concat(concat('%',#{sname}),'%')
+    </select>
+
+    <select id="findByCity" resultMap="scenicspotResultMap">
+        SELECT * FROM scenicspot WHERE city=#{city}
+    </select>
+
+    <select id="findBySort" resultMap="scenicspotResultMap">
+        SELECT * FROM scenicspot WHERE sort=#{sort}
+    </select>
+
+    <select id="findAll" resultMap="scenicspotResultMap" resultType="org.szx.graduation.dataobject.ScenicspotDO">
+        SELECT * FROM scenicspot
+    </select>
+
+    <select id="findByTwo" resultMap="scenicspotResultMap">
+        SELECT * FROM scenicspot WHERE city=#{city} AND sort=#{sort}
+    </select>
+
+
+</mapper>

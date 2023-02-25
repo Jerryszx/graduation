@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+  <link rel="stylesheet"  th:href="@{login.css}">
+</head>
+<body>
+<div class="top">
+  <a href="/homepage" class="three">首页</a>
+</div>
+<div class="center">
+  <div class="login">
+    <div class="one">轩轩网注册</div>
+    <form>
+      <input placeholder="请输入注册用户名（6-10位）" name="account" type="text" outline="none" >
+      <input placeholder="请输入密码（6-10位）" name="password1" type="password" outline="none" >
+      <input placeholder="请输入确认密码" name="password2" type="password" outline="none" >
+      <div id="login">
+        <button type="submit">注册</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩轩网-景点</title>
+  <style>
+    .one{
+      position: fixed;
+      font-weight: bold;
+      z-index: 10;
+      font-size: 15px;
+      top: 17px;
+      right: 95px;
+    }
+    .four{
+      position: fixed;
+      z-index:10;
+      right: 40px;
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      top: 5px;
+    }
+    .b1{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    .b2{
+      height: 615px;
+      width: 1370px;
+      margin-top: 50px;
+      margin-left: 0;
+      position: relative;
+    }
+    .l1{
+      position: fixed;
+      top: 50px;
+      left: 0;
+      display: inline-block;
+      width: 140px;
+      height: 615px;
+    }
+    .b3{
+      position: absolute;
+      left: 140px;
+      width: 1230px;
+      text-align: center;
+      display: inline-block;
+    }
+    .b4{
+      margin: 30px auto;
+      font-weight: bold;
+      font-size: 40px;
+      font-family: "Arial Narrow";
+    }
+    .b5{
+      margin: 30px auto;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .b6{
+      width: 800px;
+      height: 500px;
+      border-color: darksalmon;
+      border-radius: 30px;
+      margin-top: 20px;
+    }
+    .b7{
+      font-size: 28px;
+      font-weight: bolder;
+    }
+    .bottom{
+      position: relative;
+      width: 1230px;
+    }
+    .left{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 802px;
+    }
+    .right{
+      position: absolute;
+      width: 428px;
+      top: 0;
+      right: 0;
+    }
+    .comment{
+      position: relative;
+      height: 40px;
+      text-align: center;
+    }
+    .b8{
+      border-color: deepskyblue;
+      border-radius: 10px;
+      outline:none;
+      margin-top: 5px;
+      height: 30px;
+      width: 400px;
+    }
+    .b9{
+      position: absolute;
+      top: 8px;
+      right: 18px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background-size: 30px 30px;
+      border: none;
+      background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.c6a06e03aec35365b7155f3fa6bd9d00?rik=kX59wctJGCHCfA&riu=http%3a%2f%2fpic.616pic.com%2fys_img%2f00%2f14%2f04%2fP5BLP9C7LQ.jpg&ehk=JJk%2bUL9QfvojlvPFyOtThiPgYxhyiIfBQUyic1Fq1Dg%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1");
+    }
+    .belowl{
+      position: absolute;
+      top: 52px;
+      left: 0;
+      width: 45px;
+    }
+    .b10{
+      margin-top: 7px;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+    }
+    .belowc{
+      position: absolute;
+      top: 52px;
+      left: 45px;
+      width: 50px;
+    }
+    .b11{
+      margin-top: 0;
+      margin-bottom: 45px;
+      height: 20px;
+      width: 50px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    .belowr{
+      position: absolute;
+      top: 52px;
+      left: 100px;
+    }
+    .b12{
+      margin-top: 0;
+      margin-bottom: 0px;
+      height: 130px;
+      text-align: left;
+    }
+    .b15{
+      height: 130px;
+    }
+    .b13{
+      display: none;
+    }
+    .b14{
+      display: none;
+    }
+    .b16{
+      position: absolute;
+      width: 100px;
+      height: 30px;
+      top: 30px;
+      right: 40px;
+    }
+    .b17{
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 5px;
+      background-color: lightblue;
+      cursor: pointer;
+      border-color: lightcyan;
+    }
+  </style>
+</head>
+<body class="b1">
+<div th:replace="layoutr::layoutr"></div>
+<div class="b2">
+  <a href="/personal/personalcenter" >
+    <div class="one" th:text="${user.getUserName()}"></div>
+    <img th:src="${user.getHeadPortrait()}" class="four">
+  </a>
+  <div class="l1">
+    </form>
+    <form action="/szx/refreshr" method="get">
+      <button type="submit">返回首页</button>
+    </form>
+  </div>
+  <div class="b3">
+    <form  class="b16" th:action="${user.getUr()}" method="post">
+      <button class="b17">购买门票</button>
+    </form>
+    <div class="b4" th:text="${user.getScr().getSname()}"></div>
+    <div class="b5" th:text="'价格：'+${user.getScr().getRates()}+'元'"></div>
+    <div class="b5" th:text="'地点：'+${user.getScr().getCity()}"></div>
+    <div class="b5">介绍</div>
+    <div class="b7" th:text="${user.getScr().getIntroduce()}"></div>
+    <div class="bottom">
+      <div class="left">
+        <div th:each="pictureDO:${user.getScr().getUrls()}">
+          <img class="b6" th:src="${pictureDO.getUrl()}">
+        </div>
+      </div>
+      <div class="right">
+        <form action="/personal/comment" method="post" class="comment" th:name="${user.getScr().getId()}">
+          <input type="text" class="b8" placeholder="请输入您的评论" name="content" autocomplete="off">
+          <input type="text" class="b13" placeholder="" name="sid" autocomplete="off">
+          <input type="text" class="b14" placeholder="" name="Sname" autocomplete="off">
+          <button class="b9"></button>
+        </form>
+        <div class="belowl">
+          <div class="b15" th:each="head:${user.getScr().getHeadPortraitDOs()}">
+            <img class="b10" th:src="${head}">
+          </div>
+        </div>
+        <div class="belowc">
+          <div th:each="name:${user.getScr().getUname()}">
+            <div class="b11" th:text="${name}"></div>
+          </div>
+        </div>
+        <div class="belowr">
+          <div th:each="content:${user.getScr().getContent()}">
+            <div class="b12" th:text="${content}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var i1=document.querySelector('.b13');
+  var j1=document.querySelector('.comment');
+  var i2=document.querySelector('.b14');
+  var j2=document.querySelector('.b4');
+  i1.value=j1.name;
+  i2.value=j2.textContent;
+</script>
+</body>
+</html>

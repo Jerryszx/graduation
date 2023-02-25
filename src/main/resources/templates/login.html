@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>轩轩网-登录</title>
+    <style>
+        body{
+            padding:0;
+            margin: 0;
+            border: 0;
+            width: 1370px;
+            height: 665px;
+        }
+        .error{
+            color: red;
+            font-size: 5px;
+            position: relative;
+        }
+        p{
+            position: absolute;
+            top: 57px;
+        }
+
+        .top{
+            height: 50px;
+            text-align: center;
+        }
+        .three{
+            height: 50px;
+            width: 200px;
+            text-decoration: none;
+            line-height: 50px;
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            position: relative;
+        }
+        .three::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            margin-top: 10px;
+            background-size: 30px 30px;
+            position: absolute;
+            left: -40px;
+            background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.0e2431850cdbef74b5887f4dbd94d70e?rik=WrYSe5DbmHAUlA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f40002%2f3807.jpg_wh1200.jpg&ehk=3zviJKbE4PXEuGKOGLGwTeHTvnwcSlpGY1waHKf97wg%3d&risl=&pid=ImgRaw&r=0");
+        }
+        .center{
+            height: 615px;
+            position: relative;
+            background:url("https://ts1.cn.mm.bing.net/th/id/R-C.df4462fabf18edd07195679a5f8a37e5?rik=FnNvr9jWWjHCVQ&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f50059%2f8720.jpg_wh1200.jpg&ehk=ofb4q76uCls2S07aIlc8%2bab3H5zwrmj%2bhqiZ%2fyw3Ghw%3d&risl=&pid=ImgRaw&r=0") no-repeat center / cover;
+        }
+
+        .one{
+            font-size: 26px;
+            line-height: 50px;
+            height: 50px;
+            font-weight: bold;
+        }
+        form{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        input{
+            height: 26px;
+            margin-top: 22px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            width: 300px;
+        }
+        .login{
+            width: 320px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -160px;
+            margin-top: -150px;
+            background-color: white;
+            border-color: dimgray;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        .four{
+            text-align: center;
+        }
+        button{
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+            background-color: darkorange;
+            border-radius: 7px;
+            border-color: burlywood;
+        }
+        .two{
+            text-decoration: none;
+            float: right;
+            color: black;
+            margin-top: -80px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="top">
+ <a href="/szx/homepage" class="three">首页</a>
+</div>
+<div class="center">
+    <div class="login">
+        <div class="one">轩轩网登录</div>
+        <form action="/szx/loginVerify" method="post" th:object="${user}">
+            <div th:classappend="${#fields.hasErrors('account')} ? 'error' : ''">
+                <input placeholder="请输入用户名（6-10）"  name="account" type="text" >
+                <p th:if="${#fields.hasErrors('account')}" th:errors="*{account}"></p>
+            </div>
+            <div th:classappend="${#fields.hasErrors('pwd')} ? 'error' : ''">
+                <input placeholder="请输入密码（6-10）"  name="pwd" type="password" >
+                <p th:if="${#fields.hasErrors('pwd')}" th:errors="*{pwd}"></p>
+            </div>
+            <div class="four">
+                <button type="submit" >登录</button>
+            </div>
+        </form>
+        <a href="/szx/changpassword?login=false" class="two">忘记密码</a>
+    </div>
+</div>
+</body>
+</html>

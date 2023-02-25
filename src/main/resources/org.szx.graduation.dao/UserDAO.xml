@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.szx.graduation.dao.UserDAO">
+    <resultMap id="userResultMap" type="org.szx.graduation.dataobject.UserDO">
+        <id column="id" property="id"/>
+        <result column="account" property="account"/>
+        <result column="pwd" property="pwd"/>
+        <result column="user_name" property="userName"/>
+        <result column="headPortrait" property="headPortrait"/>
+        <result column="gmtCreated" property="gmtCreated"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="org.szx.graduation.dataobject.UserDO" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO user(id,account,pwd,user_name,headPortrait,gmtCreated)
+        VALUES (#{id},#{account},#{pwd},#{userName},#{headPortrait},now())
+    </insert>
+
+    <select id="findByUserAccount" resultMap="userResultMap">
+        SELECT * FROM user WHERE account=#{account}
+    </select>
+
+    <update id="update" parameterType="org.szx.graduation.dataobject.UserDO">
+        UPDATE user
+        <set>
+            <if test="#{pwd}!=null">
+                pwd=#{pwd}
+            </if>
+        </set>
+        WHERE id=#{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM user WHERE account=#{account}
+    </delete>
+</mapper>

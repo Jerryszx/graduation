@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>轩轩网-个人中心</title>
+  <style>
+    body{
+      padding:0;
+      margin: 0;
+      border: 0;
+      width: 1370px;
+      height: 665px;
+    }
+    .top{
+      height: 50px;
+      text-align: center;
+    }
+    .one{
+      margin-left: 60px;
+      position: relative;
+    }
+    .three{
+      height: 50px;
+      width: 200px;
+      text-decoration: none;
+      line-height: 50px;
+      font-size: 30px;
+      color: black;
+      font-weight: bold;
+      position: relative;
+    }
+    .three::before{
+      content: '';
+      width: 30px;
+      height: 30px;
+      margin-top: 10px;
+      background-size: 30px 30px;
+      position: absolute;
+      left: -40px;
+      background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.0e2431850cdbef74b5887f4dbd94d70e?rik=WrYSe5DbmHAUlA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f40002%2f3807.jpg_wh1200.jpg&ehk=3zviJKbE4PXEuGKOGLGwTeHTvnwcSlpGY1waHKf97wg%3d&risl=&pid=ImgRaw&r=0");
+    }
+    img{
+      background-repeat: no-repeat;
+      border-radius: 22px;
+      width: 44px;
+      height: 44px;
+      top: 40px;
+      background-size: 30px 30px;
+      position: absolute;
+      left: 20px;
+    }
+    .center{
+      height: 615px;
+      position: relative;
+      background:url("https://ts1.cn.mm.bing.net/th/id/R-C.85bcfe3d57bd5f37c44308d970d5f6bf?rik=oWvTmy8y2ZIwEw&riu=http%3a%2f%2fimg.pconline.com.cn%2fimages%2fupload%2fupc%2ftx%2fphotoblog%2f1106%2f05%2fc4%2f7902634_7902634_1307282411452.jpg&ehk=5FxMrJ5SFfWyJq8vhvpKIVryKjevlLQ9Fi%2bfFno8upY%3d&risl=&pid=ImgRaw&r=0") no-repeat center / cover;
+    }
+    .userPage{
+      width: 320px;
+      height: 500px;
+      position: absolute;
+      left: 525px;
+      top:0;
+      background-color: white;
+      border-color: dimgray;
+      border-radius: 15px;
+      padding: 30px;
+    }
+    form{
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #exit{
+      text-align: center;
+    }
+    input{
+      margin-top: 100px;
+      margin-left: 50px;
+      width: 80px;
+      height: 80px;
+      border-radius: 7px;
+      border-color: burlywood;
+      cursor: pointer;
+      position: relative;
+    }
+    .i1{
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.6c90f1e37bd969ea63b21fc48c542ed1?rik=wZI8JCigaqch2A&riu=http%3a%2f%2fbpic.588ku.com%2felement_pic%2f00%2f22%2f44%2f4856cea47ace998.jpg&ehk=arBl%2by1wpVQcIk25u2i4UiD%2bTaTulLPk%2fKrNLfhWJ6Q%3d&risl=&pid=ImgRaw&r=0");
+    }
+    .i2{
+      margin-left: 20px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-image: url("https://bpic.588ku.com/element_origin_min_pic/19/04/10/b6c45b64cf90282c56f12890c50728bb.jpg");
+    }
+    input:hover:after{
+      position: absolute;
+      margin-left: 10px;
+      content: attr(title);
+      z-index: 10;
+      line-height: 20px;
+      height: 20px;
+    }
+    .two{
+      text-decoration: none;
+      float: right;
+      color: black;
+      margin-top: 30px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="top">
+  <a href="/szx/homepager" class="three">首页</a>
+</div>
+<div class="center">
+  <div class="userPage">
+    <div>
+      <img th:src="${user.getHeadPortrait()}">
+    </div>
+    <h1 class="one" th:text="${user.getUserName()}" ></h1>
+    <h1>id：<span th:text="${user.getId()}"></span></h1>
+    <h1>账号：<span th:text="${user.getAccount()}"></span></h1>
+    <h1>密码：<span th:text="${user.getPwd()}"></span></h1>
+    <form>
+      <a href="/szx/changpassword?login=true" class="two">修改密码</a>
+      <div id="exit">
+        <input class="i1" type="button" onclick="logout();" title="退出登录">
+        <input class="i2" type="button"  onclick="writeOff();" title="注销账户">
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+  function writeOff(){
+    var r=confirm("确定注销账户吗？");
+    if (r){
+      top.location.pathname="/szx/writeOff";
+    }
+
+  }
+  function logout(){
+    var t=confirm("确定退出登录吗？");
+    if (t){
+      top.location.pathname="/szx/logout";
+    }
+
+  }
+</script>
+</body>
+</html>

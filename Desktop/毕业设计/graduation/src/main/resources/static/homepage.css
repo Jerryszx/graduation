@@ -1,0 +1,31 @@
+body{
+    height: 615px;
+    width: 1370px;
+}
+.l1{
+    width: 100px;
+    position: relative;
+}
+.t1{
+    height: 50px;
+    line-height: 50px;
+}
+.a1{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    z-index: 1;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: bold;
+    left: 0;
+    top: 0;
+}
+form{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+select{
+    display: block;
+}

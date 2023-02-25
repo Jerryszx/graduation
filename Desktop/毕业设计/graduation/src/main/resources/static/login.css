@@ -1,0 +1,78 @@
+body{
+    padding:0;
+    margin: 0;
+    border: 0;
+    width: 1370px;
+    height: 665px;
+}
+.top{
+    height: 50px;
+    text-align: center;
+}
+.three{
+    height: 50px;
+    width: 200px;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+.three::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    background-size: 30px 30px;
+    position: absolute;
+    left: -40px;
+    background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.0e2431850cdbef74b5887f4dbd94d70e?rik=WrYSe5DbmHAUlA&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f40002%2f3807.jpg_wh1200.jpg&ehk=3zviJKbE4PXEuGKOGLGwTeHTvnwcSlpGY1waHKf97wg%3d&risl=&pid=ImgRaw&r=0");
+}
+.center{
+    height: 615px;
+    position: relative;
+    background:url("https://ts1.cn.mm.bing.net/th/id/R-C.d3ae707dcc69a6e70811edf2fcc655dc?rik=0VjPOigCuFIbYw&riu=http%3a%2f%2fwww.kutoo8.com%2fupload%2fimage%2f29759371%2f1409021420906.jpg&ehk=2UL2Q7yAswaJqENAMRCyFP6wgi51QwlGh0yi5J2jeLk%3d&risl=&pid=ImgRaw&r=0") no-repeat center / cover;
+}
+.login{
+    width: 320px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -150px;
+    background-color: white;
+    border-color: dimgray;
+    border-radius: 5px;
+    padding: 30px;
+}
+.one{
+    font-size: 26px;
+    line-height: 50px;
+    height: 50px;
+    font-weight: bold;
+}
+form{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+input{
+    height: 26px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 0;
+    width: 300px;
+}
+#login{
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+    width: 250px;
+    height: 50px;
+    background-color: darkorange;
+    border-radius: 7px;
+    border-color: burlywood;
+}

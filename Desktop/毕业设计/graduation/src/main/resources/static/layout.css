@@ -1,0 +1,127 @@
+body{
+    padding:0;
+    margin: 0;
+    border: 0;
+    width: 1370px;
+    height: 665px;
+}
+.top{
+    height: 50px;
+    position: sticky;
+}
+.top::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.left{
+    line-height: 50px;
+    font-size: 40px;
+    color: dodgerblue;
+    float: left;
+    margin-left: 50px;
+}
+.left::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    background-size: 40px 40px;
+    background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.d5f90021d5d8d1a2ca06c4d45128f3bc?rik=unUZvYLTmFIN0A&riu=http%3a%2f%2fpic26.nipic.com%2f20130121%2f1767200_094632312112_2.jpg&ehk=0ZheEyOa4MR9RKpR3fe6t1EN%2bjRIo1rOcYABhq5ei4w%3d&risl=&pid=ImgRaw&r=0");
+}
+input{
+    float: left;
+    margin-left: 100px;
+    height: 30px;
+    margin-top: 10px;
+    width: 300px;
+    border-color: deepskyblue;
+    border-radius: 10px;
+    outline:none;
+    position: relative;
+}
+
+.i1{
+    position: absolute;
+    right: 717px;
+    top:12px;
+    width: 30px;
+    height: 30px;
+}
+.right{
+    float: right;
+    position: relative;
+}
+.one{
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 5px;
+    float: left;
+    width: 90px;
+    height: 30px;
+    background-color: lightcyan;
+    border-radius: 15px;
+    border-color: lightcyan;
+    font-size: 20px;
+    text-align: right;
+    line-height: 30px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+.i2{
+    position: absolute;
+    right:300px;
+    top:18px;
+    width: 24px;
+    height: 24px;
+}
+.two{
+    float: left;
+    margin-left: 30px;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    margin-top:7px;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+}
+.three{
+    float: left;
+    margin-left: 40px;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    margin-top:7px;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+}
+.three::before{
+    content: '';
+    width: 36px;
+    height: 36px;
+    margin-top: 8px;
+    background-size: 30px 30px;
+    position: absolute;
+    left: 287px;
+    background-image: url("https://img-qn.51miz.com/Element/00/54/91/01/2191ecc2_E549101_cb95aa99.png");
+    background-repeat: no-repeat;
+}
+.four{
+    float: left;
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    margin-top: 14px;
+}
+.f1{
+    position: absolute;
+    top: 20px;
+    right: 400px;
+}
+
+

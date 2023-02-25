@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录失败.账号</title>
+    <style>
+        body{
+            padding:0;
+            margin: 0;
+            border: 0;
+            width: 1370px;
+            height: 665px;
+        }
+        .top{
+            height: 50px;
+            text-align: center;
+        }
+        .center{
+            height: 615px;
+            position: relative;
+            background:url("https://ts1.cn.mm.bing.net/th/id/R-C.0658ff9102a085ccac0d23e9c14b4816?rik=R0nyHk0GHe9fAw&riu=http%3a%2f%2fseopic.699pic.com%2fphoto%2f40009%2f2082.jpg_wh1200.jpg&ehk=4oJrHhRxubQng5t3dnd911JqhXyIvy1ySYODQaIOeVA%3d&risl=&pid=ImgRaw&r=0") no-repeat center / cover;
+        }
+        .hint{
+            width: 320px;
+            height: 150px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -160px;
+            margin-top: -75px;
+            background-color: white;
+            border-color: dimgray;
+            border-radius: 5px;
+            padding: 30px;
+        }
+        .one{
+            font-size: 26px;
+            line-height: 50px;
+            height: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .two{
+            text-align: center;
+        }
+        button{
+            margin-top: 20px;
+            width: 250px;
+            height: 50px;
+            background-color: red;
+            border-radius: 7px;
+            border-color: crimson;
+        }
+    </style>
+</head>
+<body>
+<div class="top"></div>
+<div class="center">
+    <div class="hint">
+        <div class="one">此账号未注册！</div>
+        <form th:action="${user.getUr()}" method="get">
+            <div class="two">
+                <button type="submit" >返回</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

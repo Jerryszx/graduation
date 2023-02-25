@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.szx.graduation.dao.PictureDAO">
+    <resultMap id="pictureResultMap" type="org.szx.graduation.dataobject.PictureDO">
+        <id column="id" property="id"/>
+        <result column="pid" property="pid"/>
+        <result column="url" property="url"/>
+    </resultMap>
+    <select id="findByPid" resultMap="pictureResultMap" resultType="org.szx.graduation.dataobject.PictureDO">
+        SELECT * FROM picture WHERE pid=#{pid}
+    </select>
+
+</mapper>

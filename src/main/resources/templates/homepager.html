@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>轩轩网-首页</title>
+    <style>
+        .b1{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .one{
+            position: fixed;
+            font-weight: bold;
+            z-index: 10;
+            font-size: 15px;
+            top: 17px;
+            right: 95px;
+        }
+        .four{
+            position: fixed;
+            z-index:10;
+            right: 40px;
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            top: 5px;
+        }
+        .b2{
+            height: 615px;
+            width: 1370px;
+            margin-top: 50px;
+            margin-left: 0;
+            position: relative;
+        }
+        .l1{
+            position: fixed;
+            top: 50px;
+            left: 0;
+            display: inline-block;
+            width: 140px;
+            height: 615px;
+        }
+        .b3{
+            position: absolute;
+            left: 140px;
+            width: 1230px;
+            display: inline-block;
+        }
+        .b4{
+            width: 990px;
+            height: 600px;
+            border-color: darksalmon;
+        }
+        .b5{
+            border-color: darksalmon;
+            width: 230px;
+            height: 166px;
+        }
+        .b6{
+            border-color: darksalmon;
+            width: 230px;
+            height: 166px;
+        }
+        .b7{
+            border-color: darksalmon;
+            width: 230px;
+            height: 166px;
+        }
+        .b8{
+            width: 230px;
+            height: 600px;
+            display: inline-block;
+            position: relative;
+        }
+        .b9{
+            position: absolute;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            top: -90px;
+            left:0;
+            width: 230px;
+            height: 100px;
+            text-align: center;
+            font-weight: bold;
+            line-height: 100px;
+            font-family: "Arial Black";
+            color: aquamarine;
+            text-decoration: none;
+            font-size: 40px;
+        }
+        .b10{
+            text-align: center;
+            font-size: 40px;
+            line-height: 100px;
+            line-weight:bold;
+        }
+        .b11{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            position: relative;
+            width: 1230px;
+        }
+        .b12{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            margin: 0;
+            display: inline-block;
+            border-radius: 5px;
+            left: 3px;
+            top: 3px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b13{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 410px;
+            top: 3px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b14{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 820px;
+            top: 3px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b15{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 3px;
+            top: 456px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b16{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 410px;
+            top: 456px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b17{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 820px;
+            top: 456px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b18{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 3px;
+            top: 916px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b19{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 410px;
+            top: 916px;
+            position: absolute;
+            padding: 20px;
+        }
+        .b20{
+            width: 360px;
+            height: 400px;
+            background-color: beige;
+            border-radius: 5px;
+            left: 820px;
+            top: 916px;
+            position: absolute;
+            padding: 20px;
+        }
+        .i1{
+            width: 360px;
+            display: block;
+            border-radius: 10px;
+            height: 230px;
+            border-color: darksalmon;
+        }
+        .content2{
+            width: 350px;
+            white-space: nowrap;
+            font-weight: bold;
+            overflow: hidden;
+            font-size: 20px;
+            text-overflow: ellipsis;
+        }
+        .b21{
+            font-size: 30px;
+            margin-top: 5px;
+            font-family: "Arial Black";
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            background-color: beige;
+            color: aqua;
+        }
+        .b22{
+            font-size: 17px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .b23{
+            text-align: center;
+            font-size: 20px;
+            line-height: 100px;
+            line-weight:bold;
+        }
+        .b24{
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            position: absolute;
+            cursor: pointer;
+            top: 640px;
+            right: 30px;
+            font-weight: bold;
+            border-color: lightcyan;
+            background-color: lightblue;
+            margin-right: 30px;
+            margin-top: 20px;
+        }
+        .b25{
+            position: fixed;
+            display: none;
+            top: 44px;
+            width: 305px;
+            left: 350px;
+            height: 220px;
+            background-color: white;
+            z-index: 20;
+        }
+        .b26{
+            left: 350px;
+            height: 30px;
+            top: 10px;
+            width: 300px;
+            border-color: deepskyblue;
+            border-radius: 10px;
+            outline:none;
+            position: fixed;
+            z-index: 18;
+        }
+        .b27{
+            position: fixed;
+            right: 740px;
+            top:12px;
+            width: 30px;
+            height: 30px;
+            z-index: 19;
+            cursor: pointer;
+            background-size: 30px 30px;
+            border: none;
+            background-image: url("https://ts1.cn.mm.bing.net/th/id/R-C.756285576f9fda6ed56dd804005ca45e?rik=a1N7kzQlgrL4pw&riu=http%3a%2f%2fres.dps.cn%2fres%2fdecoration%2ffree302021042520766%2fthn%2f5ba65c6949c19f2e158e3dae2b07c08b.png%3fx-oss-process%3dimage%2fresize%2cl_600%2fsharpen%2c100&ehk=9ObDdf5c%2bFlaH127ITQZJfeal5IPkeT5onaqlpdTOCM%3d&risl=&pid=ImgRaw&r=0");
+        }
+        .b29{
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .b30{
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .b31{
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: left;
+            cursor: pointer;
+        }.b32{
+             height: 30px;
+             width: 300px;
+             background-color: white;
+             border: none;
+             font-size: 20px;
+             position: relative;
+             margin-left: 5px;
+             margin-top: 5px;
+             text-align: left;
+             cursor: pointer;
+         }
+        .b33{
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .b34{
+            height: 30px;
+            width: 300px;
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            margin-left: 5px;
+            margin-top: 5px;
+            text-align: left;
+            cursor: pointer;
+        }
+        .b35{
+            width: 70px;
+            height: 20px;
+            border-radius: 10px;
+            font-size: 15px;
+            position: fixed;
+            cursor: pointer;
+            top: 18px;
+            right: 630px;
+            padding-left: 10px;
+            border-color: lightcyan;
+            background-color: lightblue;
+            z-index: 30;
+        }
+    </style>
+</head>
+<body class="b1">
+<div th:replace="layoutr::layoutr"></div>
+<form action="/szx/searchr" method="post">
+    <input type="text" class="b26" placeholder="搜索任何旅游相关（仅限景点）" name="sname" autocomplete="off">
+    <button class="b27"></button>
+</form>
+<div class="b35">隐藏搜索</div>
+<div class="b25">
+    <form   th:action="${searchr.getList1().get(0).getUr()}" method="post">
+        <button class="b29" th:text="${searchr.getList1().get(0).getSname()}"></button>
+    </form>
+    <form   th:action="${searchr.getList1().get(1).getUr()}" method="post">
+        <button class="b30" th:text="${searchr.getList1().get(1).getSname()}"></button>
+    </form>
+    <form   th:action="${searchr.getList1().get(2).getUr()}" method="post">
+        <button class="b31" th:text="${searchr.getList1().get(2).getSname()}"></button>
+    </form>
+    <form   th:action="${searchr.getList1().get(3).getUr()}" method="post">
+        <button class="b32" th:text="${searchr.getList1().get(3).getSname()}"></button>
+    </form>
+    <form   th:action="${searchr.getList1().get(4).getUr()}" method="post">
+        <button class="b33" th:text="${searchr.getList1().get(4).getSname()}"></button>
+    </form>
+    <form   th:action="${searchr.getList1().get(5).getUr()}" method="post">
+        <button class="b34" th:text="${searchr.getList1().get(5).getSname()}"></button>
+    </form>
+</div>
+<div class="b2" >
+    <a href="/personal/personalcenter" >
+        <div class="one" th:text="${searchr.getUser().getUserName()}"></div>
+        <img th:src="${searchr.getUser().getHeadPortrait()}" class="four">
+    </a>
+    <div class="l1">
+        <div class="t1">选项菜单</div>
+        <form action="/szx/gatherr" method="post">
+            <div class="a">
+                <select name="city" class="c1">
+                    <option value="城市">城市</option>
+                    <option value="上海">上海</option>
+                    <option value="南京">南京</option>
+                    <option value="成都">成都</option>
+                    <option value="杭州">杭州</option>
+                </select>
+            </div>
+            <div>
+                <select name="sort" class="c2">
+                    <option value="景点类别">景点类别</option>
+                    <option value="观光">观光</option>
+                    <option value="娱乐">娱乐</option>
+                    <option value="游乐园">游乐园</option>
+                    <option value="动物园">动物园</option>
+                    <option value="博物馆">博物馆</option>
+                    <option value="海洋馆">海洋馆</option>
+                    <option value="公园">公园</option>
+                    <option value="寺庙">寺庙</option>
+                    <option value="陵园">陵园</option>
+                    <option value="建筑">建筑</option>
+                    <option value="湖泊">湖泊</option>
+                </select>
+            </div>
+            <button >确定</button>
+        </form>
+        <div class="b23" th:text="'第'+${searchr.getUser().getSc().get(10).getId()}+'页'"></div>
+        <form action="/szx/homepager" method="get">
+            <button type="submit">下一页</button>
+        </form>
+        <form action="/szx/homepagers" method="get">
+            <button type="submit">上一页</button>
+        </form>
+    </div>
+    <div class="b3">
+        <img class="b4" th:src="${searchr.getUser().getSc().get(0).getUrls().get(0).getUrl()}">
+        <div class="b8">
+            <a class="b9" href="/szx/refreshr" th:text="${searchr.getUser().getSc().get(0).getSname()}"></a>
+            <img class="b5" th:src="${searchr.getUser().getSc().get(0).getUrls().get(1).getUrl()}">
+            <img class="b6" th:src="${searchr.getUser().getSc().get(0).getUrls().get(2).getUrl()}">
+            <img class="b7" th:src="${searchr.getUser().getSc().get(0).getUrls().get(3).getUrl()}">
+        </div>
+        <form th:action="${searchr.getUser().getSc().get(0).getUr()}" method="post">
+            <button class="b24">更多</button>
+        </form>
+        <div class="b10">景点</div>
+        <div class="b11">
+            <div class="b12" href="">
+                <img class="i1" th:src="${searchr.getUser().getSc().get(1).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(1).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(1).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(1).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(1).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(1).getIntroduce()}"></div>
+            </div>
+            <div class=" b13" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(2).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(2).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(2).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(2).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(2).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(2).getIntroduce()}"></div>
+            </div>
+            <div class=" b14" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(3).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(3).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(3).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(3).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(3).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(3).getIntroduce()}"></div>
+            </div>
+            <div class=" b15" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(4).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(4).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(4).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(4).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(4).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(4).getIntroduce()}"></div>
+            </div>
+            <div class=" b16" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(5).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(5).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(5).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(5).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(5).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(5).getIntroduce()}"></div>
+            </div>
+            <div class=" b17" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(6).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(6).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(6).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(6).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(6).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(6).getIntroduce()}"></div>
+            </div>
+            <div class="b18" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(7).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(7).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(7).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(7).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(7).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(7).getIntroduce()}"></div>
+            </div>
+            <div class=" b19" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(8).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(8).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(8).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(8).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(8).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(8).getIntroduce()}"></div>
+            </div>
+            <div class="b20" >
+                <img class="i1" th:src="${searchr.getUser().getSc().get(9).getUrls().get(0).getUrl()}">
+                <form  th:action="${searchr.getUser().getSc().get(9).getUr()}" method="post">
+                    <button class="b21" th:text="${searchr.getUser().getSc().get(9).getSname()}"></button>
+                </form>
+                <div class="b22" th:text="'价格：'+${searchr.getUser().getSc().get(9).getRates()}+'元'"></div>
+                <div class="b22" th:text="'地点：'+${searchr.getUser().getSc().get(9).getCity()}"></div>
+                <div class="b22">简介</div>
+                <div class="content2" th:text="${searchr.getUser().getSc().get(9).getIntroduce()}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var r=document.querySelector('.b5');
+    var r2=document.querySelector('.b4');
+    r.addEventListener('click',function (){
+        var r1=r.getAttribute("src");
+        var r3=r2.getAttribute("src");
+        r2.setAttribute("src",r1);
+        r.setAttribute('src',r3);
+    })
+    var r4=document.querySelector('.b6');
+    var r5=document.querySelector('.b4');
+    r4.addEventListener('click',function (){
+        var r6=r4.getAttribute("src");
+        var r7=r5.getAttribute("src");
+        r5.setAttribute("src",r6);
+        r4.setAttribute('src',r7);
+    })
+    var r8=document.querySelector('.b7');
+    var r9=document.querySelector('.b4');
+    r8.addEventListener('click',function (){
+        var r10=r8.getAttribute("src");
+        var r11=r9.getAttribute("src");
+        r9.setAttribute("src",r10);
+        r8.setAttribute('src',r11);
+    })
+    var r12=document.querySelector('.b26');
+    var r13=document.querySelector('.b25');
+    var r14=document.querySelector('.b25');
+    var r15=document.querySelector('.b29');
+    var r16=document.querySelector('.b30');
+    var r17=document.querySelector('.b31');
+    var r18=document.querySelector('.b32');
+    var r19=document.querySelector('.b33');
+    var r20=document.querySelector('.b34');
+    var r21=document.querySelector('.b35');
+    r12.addEventListener('focus',function (){
+        r13.style.display="block";
+    })
+    r21.addEventListener('click',function (){
+        r14.style.display="none";
+    })
+    if(r15.textContent=="无结果") r15.disabled=true;
+    if(r16.textContent=="无结果") r16.disabled=true;
+    if(r17.textContent=="无结果") r17.disabled=true;
+    if(r18.textContent=="无结果") r18.disabled=true;
+    if(r19.textContent=="无结果") r19.disabled=true;
+    if(r20.textContent=="无结果") r20.disabled=true;
+</script>
+</body>
+</html>
